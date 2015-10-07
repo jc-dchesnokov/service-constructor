@@ -1,0 +1,3 @@
+application_service_constructor_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: ApplicationServiceConstructorBundle:Main:index }

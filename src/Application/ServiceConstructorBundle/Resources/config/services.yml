@@ -1,0 +1,4 @@
+services:
+#    application_service_constructor.example:
+#        class: Application\ServiceConstructorBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

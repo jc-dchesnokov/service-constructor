@@ -1,0 +1,21 @@
+Application\ServiceConstructorBundle\Entity\Bundle:
+    type: entity
+    table: null
+    repositoryClass: Application\ServiceConstructorBundle\Entity\BundleRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        namespace:
+            type: string
+            length: 255
+        format:
+            type: string
+            length: '30'
+    lifecycleCallbacks: {  }

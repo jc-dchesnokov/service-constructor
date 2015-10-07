@@ -1,0 +1,21 @@
+Application\ServiceConstructorBundle\Entity\Action:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        hasRoute:
+            type: boolean
+        hasView:
+            type: boolean
+        responseType:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

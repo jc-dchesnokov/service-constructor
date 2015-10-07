@@ -1,5 +1,39 @@
 {% extends 'ApplicationServiceConstructorBundle::layout.html.twig' %}
 
-{% block body %}
-3434
+{% block content %}
+<h3>Project name</h3>
+
+<ul>
+{% for bundle in bundles %}
+    <li>{{bundle.name}}</li>
+{% endfor %}
+</ul>
+<a data-toggle="modal" class="btn btn-info" href="/bundle" data-target="#myModal">add bundle</a>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Remote file for Bootstrap Modal</title>  
+
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                 <h4 class="modal-title">Modal title</h4>
+            </div>			<!-- /modal-header -->
+            <div class="modal-body">
+            <p>Excitavit hic ardor milites per municipia plurima, quae isdem conterminant, dispositos et castella, sed quisque serpentes latius pro viribus repellere moliens, nunc globis confertos, aliquotiens et dispersos multitudine superabatur ingenti.</p>
+            </div>			<!-- /modal-body -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>			<!-- /modal-footer -->
+
+</div><!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
 {% endblock %}

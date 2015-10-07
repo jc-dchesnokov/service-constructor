@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\ServiceConstructorBundle\Entity;
+namespace Application\ServiceConstructorBundle\Repository;
 
 /**
  * BundleRepository

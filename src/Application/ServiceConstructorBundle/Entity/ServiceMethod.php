@@ -52,4 +52,3 @@ class ServiceMethod
         return $this->name;
     }
 }
-

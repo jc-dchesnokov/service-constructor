@@ -52,4 +52,3 @@ class Controller
         return $this->name;
     }
 }
-

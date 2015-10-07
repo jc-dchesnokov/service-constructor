@@ -110,4 +110,3 @@ class Bundle
         return $this->format;
     }
 }
-

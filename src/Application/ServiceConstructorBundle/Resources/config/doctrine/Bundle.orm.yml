@@ -1,6 +1,6 @@
 Application\ServiceConstructorBundle\Entity\Bundle:
     type: entity
-    table: null
+    table: sc_bundles
     repositoryClass: Application\ServiceConstructorBundle\Repository\BundleRepository
     id:
         id:
@@ -18,4 +18,14 @@ Application\ServiceConstructorBundle\Entity\Bundle:
         format:
             type: string
             length: '30'
+    oneToMany:
+        controllers:
+            targetEntity: Controller
+            mappedBy: bundle
+        services:
+            targetEntity: Service
+            mappedBy: bundle
+        entities:
+            targetEntity: Entity
+            mappedBy: bundle
     lifecycleCallbacks: {  }

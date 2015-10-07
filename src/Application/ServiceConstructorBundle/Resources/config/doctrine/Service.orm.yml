@@ -1,6 +1,7 @@
 Application\ServiceConstructorBundle\Entity\Service:
     type: entity
-    table: null
+    table: sc_services
+    repositoryClass: Application\ServiceConstructorBundle\Repository\ServiceRepository
     id:
         id:
             type: integer
@@ -11,4 +12,15 @@ Application\ServiceConstructorBundle\Entity\Service:
         name:
             type: string
             length: 255
+    manyToOne:
+        bundle:
+            targetEntity: Bundle
+            inversedBy: controllers
+            joinColumn:
+                name: bundle_id
+                referencedColumnName: id
+    oneToMany:
+        methods:
+            targetEntity: ServiceMethod
+            mappedBy: service
     lifecycleCallbacks: {  }

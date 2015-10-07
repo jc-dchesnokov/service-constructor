@@ -139,4 +139,3 @@ class Action
         return $this->responseType;
     }
 }
-

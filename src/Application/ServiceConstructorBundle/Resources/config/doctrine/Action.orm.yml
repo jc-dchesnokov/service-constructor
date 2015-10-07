@@ -1,6 +1,7 @@
 Application\ServiceConstructorBundle\Entity\Action:
     type: entity
-    table: null
+    table: sc_actions
+    repositoryClass: Application\ServiceConstructorBundle\Repository\ActionRepository
     id:
         id:
             type: integer
@@ -18,4 +19,11 @@ Application\ServiceConstructorBundle\Entity\Action:
         responseType:
             type: string
             length: 255
+    manyToOne:
+        controller:
+            targetEntity: Controller
+            inversedBy: actions
+            joinColumn:
+                name: controller_id
+                referencedColumnName: id
     lifecycleCallbacks: {  }

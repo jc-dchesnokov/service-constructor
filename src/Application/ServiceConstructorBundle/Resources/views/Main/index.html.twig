@@ -8,14 +8,47 @@
     <li>{{bundle.name}}</li>
 {% endfor %}
 </ul>
-<a data-toggle="modal" class="btn btn-info" href="/bundle" data-target="#myModal">add bundle</a>
+
+<table class="table records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Namespace</th>
+            <th>Format</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in bundles %}
+        <tr>
+            <td><a href="{{ path('bundle_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.name }}</td>
+            <td>{{ entity.namespace }}</td>
+            <td>{{ entity.format }}</td>
+            <td>
+            <ul>
+                <li>
+                    <a href="{{ path('bundle_show', { 'id': entity.id }) }}">show</a>
+                </li>
+                <li>
+                    <a href="{{ path('bundle_edit', { 'id': entity.id }) }}">edit</a>
+                </li>
+            </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<a data-toggle="modal" class="btn btn-info" href="{{path('bundle_new')}}" data-target="#myModal">add bundle</a>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     <div class="modal-dialog">
         <div class="modal-content">
 
 
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+{#  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title>Remote file for Bootstrap Modal</title>  
 
 
@@ -30,7 +63,7 @@
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-primary">Save changes</button>
             </div>			<!-- /modal-footer -->
-
+#}
 </div><!-- /.modal-content -->
     </div>
     <!-- /.modal-dialog -->

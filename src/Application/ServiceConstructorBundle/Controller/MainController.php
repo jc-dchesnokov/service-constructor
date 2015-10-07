@@ -8,6 +8,8 @@ class MainController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('ApplicationServiceConstructorBundle:Main:index.html.twig', ['bundles' => []]);
+    	$em = $this->get('doctrine.orm.entity_manager');
+    	$bundles = $em->getRepository('ApplicationServiceConstructorBundle:Bundle')->findAll();
+        return $this->render('ApplicationServiceConstructorBundle:Main:index.html.twig', ['bundles' => $bundles]);
     }
 }

@@ -1,0 +1,30 @@
+bundle:
+    path:     /
+    defaults: { _controller: "ApplicationServiceConstructorBundle:Bundle:index" }
+
+bundle_show:
+    path:     /{id}/show
+    defaults: { _controller: "ApplicationServiceConstructorBundle:Bundle:show" }
+
+bundle_new:
+    path:     /new
+    defaults: { _controller: "ApplicationServiceConstructorBundle:Bundle:new" }
+
+bundle_create:
+    path:     /create
+    defaults: { _controller: "ApplicationServiceConstructorBundle:Bundle:create" }
+    methods:  POST
+
+bundle_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "ApplicationServiceConstructorBundle:Bundle:edit" }
+
+bundle_update:
+    path:     /{id}/update
+    defaults: { _controller: "ApplicationServiceConstructorBundle:Bundle:update" }
+    methods:  [POST, PUT]
+
+bundle_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "ApplicationServiceConstructorBundle:Bundle:delete" }
+    methods:  [POST, DELETE]

@@ -1,3 +1,7 @@
+application_service_constructor_bundle:
+    resource: "@ApplicationServiceConstructorBundle/Resources/config/routing/bundle.yml"
+    prefix:   /bundle
+
 application_service_constructor_homepage:
     path:     /
     defaults: { _controller: ApplicationServiceConstructorBundle:Main:index }

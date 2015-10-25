@@ -10,25 +10,29 @@
 
 
 {% block header %}
-    {{bm.showHeader|raw}}
+    {{_self.showArea(bm.getHeader)}}
 {% endblock header %}
 
 {% block left %}
-    {{bm.showLeft|raw}}
+    {{_self.showArea(bm.getLeft)}}
 {% endblock left %}
 
 {% block top_content %}
-    {{bm.showTop|raw}}
+    {{_self.showArea(bm.getTop)}}
 {% endblock top_content %}
 
 {% block bottom_content %}
-    {{bm.showBottom|raw}}
+    {{_self.showArea(bm.getBottom)}}
 {% endblock bottom_content %}
 
 {% block right %}
-    {{bm.showRight|raw}}
+    {{_self.showArea(bm.getRight)}}
 {% endblock right %}
 
 {% block footer %}
-    {{bm.showFooter|raw}}
+    {{_self.showArea(bm.getFooter)}}
 {% endblock footer %}
+
+{% macro showArea(blocks) %}
+   {{render(controller('ApplicationCMSBundle:Page:blocks', {'blocks': blocks}))}}
+{% endmacro %}

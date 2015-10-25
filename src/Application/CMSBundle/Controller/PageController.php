@@ -28,4 +28,9 @@ class PageController extends Controller
     {
         return $this->render('ApplicationCMSBundle:Page:block.html.twig', array('block' => $block)); 
     }
+    
+//    public function pluginAction($block)
+//    {
+//        return new \Symfony\Component\HttpFoundation\Response;
+//    }
 }

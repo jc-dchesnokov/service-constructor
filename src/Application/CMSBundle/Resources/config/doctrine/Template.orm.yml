@@ -1,0 +1,21 @@
+Application\CMSBundle\Entity\Template:
+    type: entity
+    table: cms_template
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+    oneToMany:
+        pages:
+            targetEntity: Page
+            mappedBy: template
+        blockToTemplates:
+            targetEntity: BlockToTemplate
+            mappedBy: template
+    lifecycleCallbacks: {  }

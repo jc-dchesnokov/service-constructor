@@ -1,0 +1,30 @@
+Application\CMSBundle\Entity\Block:
+    type: entity
+    table: cms_block
+    repositoryClass: Application\CMSBundle\Repository\BlockRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        isActive:
+            type: boolean
+            column: is_active
+        isAsync: 
+            type: boolean
+            column: is_async
+        locale:
+            type: string
+            length: '2'
+        content:
+            type: text
+    oneToMany:
+        blockToTemplates:
+            targetEntity: BlockToTemplate
+            mappedBy: block
+    lifecycleCallbacks: {  }

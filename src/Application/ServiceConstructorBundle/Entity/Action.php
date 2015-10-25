@@ -138,4 +138,33 @@ class Action
     {
         return $this->responseType;
     }
+    /**
+     * @var \Application\ServiceConstructorBundle\Entity\Controller
+     */
+    private $controller;
+
+
+    /**
+     * Set controller
+     *
+     * @param \Application\ServiceConstructorBundle\Entity\Controller $controller
+     *
+     * @return Action
+     */
+    public function setController(\Application\ServiceConstructorBundle\Entity\Controller $controller = null)
+    {
+        $this->controller = $controller;
+
+        return $this;
+    }
+
+    /**
+     * Get controller
+     *
+     * @return \Application\ServiceConstructorBundle\Entity\Controller
+     */
+    public function getController()
+    {
+        return $this->controller;
+    }
 }

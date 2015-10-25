@@ -1,0 +1,5 @@
+services:
+    application_cms.block_manager:
+        class: Application\CMSBundle\Service\BlockManager
+        arguments:   
+            - @service_container

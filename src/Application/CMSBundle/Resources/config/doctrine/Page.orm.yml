@@ -1,0 +1,32 @@
+Application\CMSBundle\Entity\Page:
+    type: entity
+    table: cms_page
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+        slug:
+            type: string
+            length: 255
+        isActive:
+            type: boolean
+            column: is_active
+        locale:
+            type: string
+            length: '2'
+        content:
+            type: text
+    manyToOne:
+        template:
+            targetEntity: Template
+            inversedBy: pages
+            joinColumn:
+                name: template_id
+                referencedColumnName: id
+    lifecycleCallbacks: {  }

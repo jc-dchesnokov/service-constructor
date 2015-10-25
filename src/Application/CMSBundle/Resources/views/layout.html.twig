@@ -1,0 +1,34 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}{% endblock title %}
+
+{% block stylesheets %}
+    {% block seo_description %}{% endblock seo_description %}
+    {% block seo_keywords %}{% endblock seo_keywords %}
+    {{ parent() }}
+{% endblock stylesheets %}
+
+{% block body %}
+
+    {% block header %}
+    {% endblock header %}
+
+    {% block left %}
+    {% endblock left %}
+
+    {% block top_content %}
+    {% endblock top_content %}
+
+    {% block content %}
+    {% endblock content %}
+
+    {% block bottom_content %}
+    {% endblock bottom_content %}
+
+    {% block right %}
+    {% endblock right %}
+
+    {% block footer %}
+    {% endblock footer %}
+
+{% endblock body %}

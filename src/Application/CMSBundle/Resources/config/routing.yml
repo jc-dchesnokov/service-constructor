@@ -1,0 +1,3 @@
+application_cms_page:
+    path:      /{slug}.html
+    defaults:  { _controller: ApplicationCMSBundle:Page:index }

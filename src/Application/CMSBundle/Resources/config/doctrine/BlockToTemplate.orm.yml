@@ -1,0 +1,30 @@
+Application\CMSBundle\Entity\BlockToTemplate:
+    type: entity
+    table: cms_block_to_template
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        area:
+            type: string
+            length: '10'
+        orderNum:
+            type: integer
+            column: order_num
+    manyToOne:
+        template:
+            targetEntity: Template
+            inversedBy: blockToTemplates
+            joinColumn:
+                name: template_id
+                referencedColumnName: id
+        block:
+            targetEntity: Block
+            inversedBy: blockToTemplates
+            joinColumn:
+                name: block_id
+                referencedColumnName: id
+    lifecycleCallbacks: {  }

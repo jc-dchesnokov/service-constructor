@@ -109,4 +109,33 @@ class Entity
     {
         return $this->repository;
     }
+    /**
+     * @var \Application\ServiceConstructorBundle\Entity\Bundle
+     */
+    private $bundle;
+
+
+    /**
+     * Set bundle
+     *
+     * @param \Application\ServiceConstructorBundle\Entity\Bundle $bundle
+     *
+     * @return Entity
+     */
+    public function setBundle(\Application\ServiceConstructorBundle\Entity\Bundle $bundle = null)
+    {
+        $this->bundle = $bundle;
+
+        return $this;
+    }
+
+    /**
+     * Get bundle
+     *
+     * @return \Application\ServiceConstructorBundle\Entity\Bundle
+     */
+    public function getBundle()
+    {
+        return $this->bundle;
+    }
 }

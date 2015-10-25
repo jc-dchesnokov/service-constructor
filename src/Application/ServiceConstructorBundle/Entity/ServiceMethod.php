@@ -51,4 +51,33 @@ class ServiceMethod
     {
         return $this->name;
     }
+    /**
+     * @var \Application\ServiceConstructorBundle\Entity\service
+     */
+    private $service;
+
+
+    /**
+     * Set service
+     *
+     * @param \Application\ServiceConstructorBundle\Entity\service $service
+     *
+     * @return ServiceMethod
+     */
+    public function setService(\Application\ServiceConstructorBundle\Entity\service $service = null)
+    {
+        $this->service = $service;
+
+        return $this;
+    }
+
+    /**
+     * Get service
+     *
+     * @return \Application\ServiceConstructorBundle\Entity\service
+     */
+    public function getService()
+    {
+        return $this->service;
+    }
 }

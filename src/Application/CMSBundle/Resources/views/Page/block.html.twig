@@ -1,0 +1,34 @@
+{% extends "ApplicationCMSBundle::layout.html.twig" %}
+
+{% block title %}{% endblock title %}
+{% block seo_description %}{% endblock seo_description %}
+{% block seo_keywords %}{% endblock seo_keywords %}
+
+{% block content %}
+    {{page.content|raw}}
+{% endblock content %}
+
+
+{% block header %}
+    {{bm.showHeader|raw}}
+{% endblock header %}
+
+{% block left %}
+    {{bm.showLeft|raw}}
+{% endblock left %}
+
+{% block top_content %}
+    {{bm.showTop|raw}}
+{% endblock top_content %}
+
+{% block bottom_content %}
+    {{bm.showBottom|raw}}
+{% endblock bottom_content %}
+
+{% block right %}
+    {{bm.showRight|raw}}
+{% endblock right %}
+
+{% block footer %}
+    {{bm.showFooter|raw}}
+{% endblock footer %}

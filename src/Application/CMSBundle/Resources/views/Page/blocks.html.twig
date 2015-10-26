@@ -1,7 +1,7 @@
 {% for block in blocks %}
     {% if block.isAsync %}
         {# use hinclude in future #}
-        {{render(controller('ApplicationCMSBundle:Page:block', {'block': block}))}}
+        {{render_hinclude(controller('ApplicationCMSBundle:Page:asyncBlock', {'block_id': block.id}))}}
     {% else %}
         {{render(controller('ApplicationCMSBundle:Page:block', {'block': block}))}}
     {% endif %}

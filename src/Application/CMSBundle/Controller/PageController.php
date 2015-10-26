@@ -29,6 +29,12 @@ class PageController extends Controller
         return $this->render('ApplicationCMSBundle:Page:block.html.twig', array('block' => $block)); 
     }
     
+    public function asyncBlockAction($block_id)
+    {
+        $block = $this->getDoctrine()->getManager()->getRepository('ApplicationCMSBundle:Block')->find($block_id);
+        return $this->render('ApplicationCMSBundle:Page:asyncBlock.html.twig', array('block' => $block)); 
+    }
+    
 //    public function pluginAction($block)
 //    {
 //        return new \Symfony\Component\HttpFoundation\Response;

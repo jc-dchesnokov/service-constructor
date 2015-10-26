@@ -1,0 +1,6 @@
+services:
+    application_cms.admin.page:
+        class: Application\CMSBundle\Admin\PageAdmin
+        arguments: [~, Application\CMSBundle\Entity\Page, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Pages, group: CMS }

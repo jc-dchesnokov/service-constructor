@@ -28,8 +28,7 @@ class PageAdmin extends Admin
             ->add('slug')
             ->add('isActive')
             ->add('template')
-            ->add('locale')
-                
+            ->add('locale')    
         ;
     }
 

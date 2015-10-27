@@ -7,40 +7,36 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 
-class PageAdmin extends Admin
+class BlockToTemplateAdmin extends Admin
 {
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('name')
-            ->add('slug')
-            ->add('isActive')
+            ->add('area')
+            ->add('orderNum')
             ->add('template')
-            ->add('locale')
-            ->add('content')
+            ->add('block')
         ;
     }
 
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('name')
-            ->add('slug')
-            ->add('isActive')
+            ->add('area')
+            ->add('orderNum')
             ->add('template')
-            ->add('locale')
-                
+            ->add('block')
         ;
     }
 
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->addIdentifier('name')
-            ->add('slug')
-            ->add('isActive')
+            ->addIdentifier('id')
+            ->add('area')
+            ->add('orderNum')
             ->add('template')
-            ->add('locale')
+            ->add('block')
         ;
     }
 }

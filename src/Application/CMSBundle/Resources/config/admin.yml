@@ -4,3 +4,21 @@ services:
         arguments: [~, Application\CMSBundle\Entity\Page, ~]
         tags:
             - { name: sonata.admin, manager_type: orm, label: Pages, group: CMS }
+
+    application_cms.admin.block:
+        class: Application\CMSBundle\Admin\BlockAdmin
+        arguments: [~, Application\CMSBundle\Entity\Block, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Blocks, group: CMS }
+
+    application_cms.admin.template:
+        class: Application\CMSBundle\Admin\TemplateAdmin
+        arguments: [~, Application\CMSBundle\Entity\Template, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Templates, group: CMS }
+            
+    application_cms.admin.block_to_template:
+        class: Application\CMSBundle\Admin\BlockToTemplateAdmin
+        arguments: [~, Application\CMSBundle\Entity\BlockToTemplate, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: BlockToTemplates, group: CMS }

@@ -17,7 +17,11 @@ class Template
      */
     private $name;
 
-
+    public function __toString()
+    {
+        return $this->name?$this->name:'New';
+    }
+    
     /**
      * Get id
      *

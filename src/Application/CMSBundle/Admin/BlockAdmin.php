@@ -7,15 +7,14 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 
-class PageAdmin extends Admin
+class BlockAdmin extends Admin
 {
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
             ->add('name')
-            ->add('slug')
             ->add('isActive')
-            ->add('template')
+            ->add('isAsync')
             ->add('locale')
             ->add('content')
         ;
@@ -25,11 +24,9 @@ class PageAdmin extends Admin
     {
         $datagridMapper
             ->add('name')
-            ->add('slug')
             ->add('isActive')
-            ->add('template')
+            ->add('isAsync')
             ->add('locale')
-                
         ;
     }
 
@@ -37,9 +34,8 @@ class PageAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('name')
-            ->add('slug')
             ->add('isActive')
-            ->add('template')
+            ->add('isAsync')
             ->add('locale')
         ;
     }

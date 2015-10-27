@@ -32,6 +32,10 @@ class Block
      */
     private $content;
 
+    public function __toString()
+    {
+        return $this->name?$this->name:'New';
+    }
 
     /**
      * Get id

@@ -15,7 +15,7 @@ Application\ServiceConstructorBundle\Entity\Service:
     manyToOne:
         bundle:
             targetEntity: Bundle
-            inversedBy: controllers
+            inversedBy: services
             joinColumn:
                 name: bundle_id
                 referencedColumnName: id

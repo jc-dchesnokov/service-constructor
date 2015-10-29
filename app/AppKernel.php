@@ -16,7 +16,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            
+
             // SonataAdminBundle
             new Sonata\CoreBundle\SonataCoreBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
@@ -24,15 +24,17 @@ class AppKernel extends Kernel
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
             new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
-            
-            new AppBundle\AppBundle(),
-            new Application\ServiceConstructorBundle\ApplicationServiceConstructorBundle(),
-            new Application\CMSBundle\ApplicationCMSBundle(),
-            
+
+            //UserBundle
             new FOS\UserBundle\FOSUserBundle(),
             new Sonata\UserBundle\SonataUserBundle(),
             new Bundles\UserBundle\BundlesUserBundle(),
-            
+
+            // work
+            new AppBundle\AppBundle(),
+            new Application\ServiceConstructorBundle\ApplicationServiceConstructorBundle(),
+            new Application\CMSBundle\ApplicationCMSBundle(),
+
 //            new \HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
 //            new CodeMe\TheBundle\TheBundle(),
         );

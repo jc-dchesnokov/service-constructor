@@ -15,7 +15,6 @@ class Group extends BaseGroup
      */
     protected $id;
 
-
     /**
      * Get id
      *

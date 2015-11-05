@@ -1,0 +1,27 @@
+Application\SeoBundle\Entity\MetaData:
+    type: entity
+    table: null
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        description:
+            type: string
+            length: 255
+        keywords:
+            type: string
+            length: 255
+        metaData:
+            type: array
+        canonocalLink:
+            type: string
+            length: 255
+        alternateLinks:
+            type: array
+    lifecycleCallbacks: {  }

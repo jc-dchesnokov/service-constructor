@@ -34,9 +34,12 @@ class AppKernel extends Kernel
             new AppBundle\AppBundle(),
             new Application\ServiceConstructorBundle\ApplicationServiceConstructorBundle(),
             new Application\CMSBundle\ApplicationCMSBundle(),
-
+            new Application\SeoBundle\ApplicationSeoBundle(),
+            
+            
 //            new \HWI\Bundle\OAuthBundle\HWIOAuthBundle(),
 //            new CodeMe\TheBundle\TheBundle(),
+
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

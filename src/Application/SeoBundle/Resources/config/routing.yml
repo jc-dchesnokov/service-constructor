@@ -1,0 +1,3 @@
+#application_seo_homepage:
+#    path:     /hello/{name}
+#    defaults: { _controller: ApplicationSeoBundle:Seo:index }

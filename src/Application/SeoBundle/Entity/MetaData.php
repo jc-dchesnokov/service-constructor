@@ -196,5 +196,33 @@ class MetaData
     {
         return $this->alternateLinks;
     }
-}
+    /**
+     * @var \Application\CMSBundle\Entity\Page
+     */
+    private $page;
 
+
+    /**
+     * Set page
+     *
+     * @param \Application\CMSBundle\Entity\Page $page
+     *
+     * @return MetaData
+     */
+    public function setPage(\Application\CMSBundle\Entity\Page $page = null)
+    {
+        $this->page = $page;
+
+        return $this;
+    }
+
+    /**
+     * Get page
+     *
+     * @return \Application\CMSBundle\Entity\Page
+     */
+    public function getPage()
+    {
+        return $this->page;
+    }
+}

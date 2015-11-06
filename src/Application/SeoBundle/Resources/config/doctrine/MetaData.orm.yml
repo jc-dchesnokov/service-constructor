@@ -24,4 +24,11 @@ Application\SeoBundle\Entity\MetaData:
             length: 255
         alternateLinks:
             type: array
+    oneToOne:
+        page:
+            targetEntity: Application\CMSBundle\Entity\Page
+            inversedBy: metaData
+            joinColumn:
+                name: page_id
+                referencedColumnName: id
     lifecycleCallbacks: {  }

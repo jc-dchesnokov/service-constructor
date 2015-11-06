@@ -200,4 +200,33 @@ class Page
     {
         return $this->template;
     }
+    /**
+     * @var \Application\SeoBundle\Entity\MetaData
+     */
+    private $metaData;
+
+
+    /**
+     * Set metaData
+     *
+     * @param \Application\SeoBundle\Entity\MetaData $metaData
+     *
+     * @return Page
+     */
+    public function setMetaData(\Application\SeoBundle\Entity\MetaData $metaData = null)
+    {
+        $this->metaData = $metaData;
+
+        return $this;
+    }
+
+    /**
+     * Get metaData
+     *
+     * @return \Application\SeoBundle\Entity\MetaData
+     */
+    public function getMetaData()
+    {
+        return $this->metaData;
+    }
 }

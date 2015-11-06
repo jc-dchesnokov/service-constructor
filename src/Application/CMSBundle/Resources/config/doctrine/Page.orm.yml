@@ -29,4 +29,8 @@ Application\CMSBundle\Entity\Page:
             joinColumn:
                 name: template_id
                 referencedColumnName: id
+    oneToOne:
+        metaData:
+            targetEntity: Application\SeoBundle\Entity\MetaData
+            mappedBy: page
     lifecycleCallbacks: {  }

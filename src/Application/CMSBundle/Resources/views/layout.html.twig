@@ -3,8 +3,7 @@
 {% block title %}{% endblock title %}
 
 {% block stylesheets %}
-    {% block seo_description %}{% endblock seo_description %}
-    {% block seo_keywords %}{% endblock seo_keywords %}
+{% block meta_data %}{% endblock meta_data %}
     {{ parent() }}
     <script src="{{ asset('bundles/applicationcms/js/hinclude.js') }}"></script>
 {% endblock stylesheets %}

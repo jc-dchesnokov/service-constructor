@@ -1,8 +1,20 @@
 {% extends "ApplicationCMSBundle::layout.html.twig" %}
 
-{% block title %}{% endblock title %}
-{% block seo_description %}{% endblock seo_description %}
-{% block seo_keywords %}{% endblock seo_keywords %}
+{% block title %}{% if page.metaData.title %}{{page.metaData.title|raw}}{% else %}{{ parent() }}{% endif %}{% endblock title %}
+
+{% block meta_data %}
+    {#render metadata #}
+    {% if page.metaData.description %}
+        <meta name="description" content="{{page.metaData.description}}" />
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+    {% if page.metaData.keywords %}
+        <meta name="keywords" content="{{page.metaData.keywords}}" />
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock meta_data %}
 
 {% block content %}
     {{page.content|raw}}

@@ -18,17 +18,17 @@ class PageController extends Controller
         $bm->setTemplate($page->getTemplate());
         return $this->render('ApplicationCMSBundle:Page:index.html.twig', array('page' => $page, 'bm' => $bm)); 
     }
-    
+
     public function blocksAction($blocks)
     {
         return $this->render('ApplicationCMSBundle:Page:blocks.html.twig', array('blocks' => $blocks)); 
     }
-    
+
     public function blockAction($block)
     {
         return $this->render('ApplicationCMSBundle:Page:block.html.twig', array('block' => $block)); 
     }
-    
+
     public function asyncBlockAction($block_id)
     {
         $block = $this->getDoctrine()->getManager()->getRepository('ApplicationCMSBundle:Block')->find($block_id);

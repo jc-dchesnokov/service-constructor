@@ -13,10 +13,10 @@ class PageController extends Controller
 
         if (is_null($page) || empty($page)) {
             throw $this->createNotFoundException('Page not found!');
-        } else {
-            $bm->setTemplate($page->getTemplate());
-            return $this->render('ApplicationCMSBundle:Page:index.html.twig', array('page' => $page, 'bm' => $bm)); 
         }
+        
+        $bm->setTemplate($page->getTemplate());
+        return $this->render('ApplicationCMSBundle:Page:index.html.twig', array('page' => $page, 'bm' => $bm)); 
     }
     
     public function blocksAction($blocks)

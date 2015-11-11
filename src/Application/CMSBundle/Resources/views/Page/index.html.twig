@@ -6,14 +6,11 @@
     {#render metadata #}
     {% if page.metaData.description %}
         <meta name="description" content="{{page.metaData.description}}" />
-    {% else %}
-        {{ parent() }}
     {% endif %}
     {% if page.metaData.keywords %}
         <meta name="keywords" content="{{page.metaData.keywords}}" />
-    {% else %}
-        {{ parent() }}
     {% endif %}
+    {{ parent() }}
 {% endblock meta_data %}
 
 {% block content %}

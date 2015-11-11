@@ -18,6 +18,21 @@ class PageController extends Controller
         $bm->setTemplate($page->getTemplate());
         return $this->render('ApplicationCMSBundle:Page:index.html.twig', array('page' => $page, 'bm' => $bm)); 
     }
+    
+    /*
+    public function pageAction($slug)
+    {
+        $bm = $this->get('application_cms.block_manager');
+        $page = $this->getDoctrine()->getManager()->getRepository('ApplicationCMSBundle:Page')->findOneBy(array('slug' => $slug));
+
+        if (is_null($page) || empty($page)) {
+            throw $this->createNotFoundException('Page not found!');
+        }
+        
+        $bm->setTemplate($page->getTemplate());
+        return $this->render('ApplicationCMSBundle:Page:page.html.twig', array('page' => $page, 'bm' => $bm)); 
+    }
+    */
 
     public function blocksAction($blocks)
     {
